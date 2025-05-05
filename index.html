@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pesquisa de Livros</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1>Pesquisa de Livros</h1>
+    <form id="formPesquisa">
+      <div>
+        <label for="titulo">Título do livro:</label><br />
+        <input type="text" id="titulo" name="titulo" placeholder="Ex: Dom Casmurro" />
+      </div>
+      <br />
+      <div>
+        <label for="autor">Autor:</label><br />
+        <input type="text" id="autor" name="autor" placeholder="Ex: Machado de Assis" />
+      </div>
+      <br />
+      <button type="submit">Pesquisar</button>
+      <button type="button" id="limparBtn">Limpar</button>
+    </form>
+
+    <hr />
+    <div id="resultado"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+

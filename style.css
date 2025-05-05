@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  form div {
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0077cc;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background-color: #005fa3;
+  }
+  
+  #limparBtn {
+    background-color: #cc3300;
+  }
+  
+  #limparBtn:hover {
+    background-color: #a32600;
+  }
+  
+  .livro {
+    padding: 10px;
+    background-color: #f0f8ff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .livro h2 {
+    color: #004080;
+  }
+  
+  .livro img {
+    max-width: 120px;
+    display: block;
+    margin: 10px 0;
+  }
+  
+  p.erro {
+    color: red;
+    font-weight: bold;
+  }
+  
+  p.carregando {
+    color: #555;
+    font-style: italic;
+  }
+  
