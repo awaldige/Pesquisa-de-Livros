@@ -26,15 +26,18 @@ form.addEventListener('submit', function (e) {
         resultado.innerHTML = data.items.slice(0, 10).map(item => {
           const volume = item.volumeInfo;
           return `
-            <div class="livro">
-              <h2>${volume.title || 'Sem título'}</h2>
-              <p><strong>Autor(es):</strong> ${volume.authors ? volume.authors.join(', ') : 'Desconhecido'}</p>
-              <p><strong>Publicado em:</strong> ${volume.publishedDate || 'Data desconhecida'}</p>
-              <p><strong>Descrição:</strong> ${volume.description ? volume.description : 'Sem descrição disponível'}</p>
-              ${volume.imageLinks ? `<img src="${volume.imageLinks.thumbnail}" alt="Capa de ${volume.title}">` : ''}
-              ${volume.infoLink ? `<p><a href="${volume.infoLink}" target="_blank">Mais informações</a></p>` : ''}
+            <div class="result-card">
+              ${volume.imageLinks ? `
+                <img src="${volume.imageLinks.thumbnail}" alt="Capa de ${volume.title}">
+              ` : '<div class="no-image">Sem imagem</div>'}
+              <div class="result-info">
+                <h2>${volume.title || 'Sem título'}</h2>
+                <p><strong>Autor(es):</strong> ${volume.authors ? volume.authors.join(', ') : 'Desconhecido'}</p>
+                <p><strong>Publicado em:</strong> ${volume.publishedDate || 'Data desconhecida'}</p>
+                <p><strong>Descrição:</strong> ${volume.description ? volume.description : 'Sem descrição disponível'}</p>
+                ${volume.infoLink ? `<p><a href="${volume.infoLink}" target="_blank">Mais informações</a></p>` : ''}
+              </div>
             </div>
-            <hr>
           `;
         }).join('');
       } else {
