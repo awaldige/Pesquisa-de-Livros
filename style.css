@@ -1,84 +1,147 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f5f5f5;
-  }
-  
-  main {
-    max-width: 800px;
-    margin: auto;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1 {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #0077cc;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+#limparBtn {
+  background-color: #cc3300;
+}
+
+#limparBtn:hover {
+  background-color: #a32600;
+}
+
+.livro {
+  padding: 10px;
+  background-color: #f0f8ff;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.livro h2 {
+  color: #004080;
+}
+
+.livro img {
+  max-width: 120px;
+  display: block;
+  margin: 10px 0;
+}
+
+p.erro {
+  color: red;
+  font-weight: bold;
+}
+
+p.carregando {
+  color: #555;
+  font-style: italic;
+}
+
+/* Estilo para os resultados de filmes/séries */
+.result-card {
+  display: flex;
+  gap: 16px;
+  background-color: #f0f8ff;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  align-items: flex-start;
+}
+
+.result-card img {
+  max-width: 120px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.result-info {
+  flex: 1;
+}
+
+.result-info h3 {
+  margin-top: 0;
+  color: #004080;
+}
+
+.result-info p {
+  margin: 6px 0;
+  font-size: 0.95em;
+  color: #333;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+  .result-card {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    color: #333;
   }
-  
-  form div {
+
+  .result-card img {
+    margin-bottom: 10px;
+    max-width: 80%;
+  }
+
+  .result-info {
+    text-align: left;
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
     margin-bottom: 10px;
   }
-  
-  input[type="text"] {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+
+  form div {
+    display: flex;
+    flex-direction: column;
   }
-  
-  button {
-    padding: 10px 20px;
-    margin-right: 10px;
-    border: none;
-    border-radius: 4px;
-    background-color: #0077cc;
-    color: white;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  button:hover {
-    background-color: #005fa3;
-  }
-  
-  #limparBtn {
-    background-color: #cc3300;
-  }
-  
-  #limparBtn:hover {
-    background-color: #a32600;
-  }
-  
-  .livro {
-    padding: 10px;
-    background-color: #f0f8ff;
-    border-radius: 5px;
-    margin-bottom: 20px;
-  }
-  
-  .livro h2 {
-    color: #004080;
-  }
-  
-  .livro img {
-    max-width: 120px;
-    display: block;
-    margin: 10px 0;
-  }
-  
-  p.erro {
-    color: red;
-    font-weight: bold;
-  }
-  
-  p.carregando {
-    color: #555;
-    font-style: italic;
-  }
+}
+
   
