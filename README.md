@@ -42,11 +42,9 @@ Google Books API — Fonte de dados dos livros
 
 📸 Prévia
 
-![IMG_1318](https://github.com/user-attachments/assets/ceca618f-a09a-4281-aa6a-1eec71ec9a35)
-![IMG_1319](https://github.com/user-attachments/assets/13d84c99-d381-4bee-9aaf-29966b92f96a)
-![IMG_1320](https://github.com/user-attachments/assets/56c235d1-6cee-403f-9bb7-62e4d133bfcf)
-![IMG_1321](https://github.com/user-attachments/assets/5749579d-7fc7-4fe4-af2d-bba93038b42f)
-![IMG_1322](https://github.com/user-attachments/assets/45f692bb-48b9-46da-bc62-910c943fe641)
+![Captura de tela 2026-04-04 145513](https://github.com/user-attachments/assets/2e3e38d0-7f99-40d9-a55a-d50ddb23f424)
+![Captura de tela 2026-04-04 145357](https://github.com/user-attachments/assets/7fd1027c-e382-4dd3-b469-76acc70619d8)
+
 
 
 
