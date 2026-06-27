@@ -1,81 +1,60 @@
-/* ==========================================================================
-   1. VARIÁVEIS GLOBAIS (Design System Sutil)
-   ========================================================================== */
 :root {
-  --bg-primary: #f8fafc;        /* Slate 50: fundo mais moderno e leve */
+  --bg-primary: #f8fafc;
   --bg-card: #ffffff;
-  --text-main: #0f172a;         /* Slate 900: contraste excelente sem ser preto puro */
-  --text-muted: #64748b;        /* Slate 500: para textos secundários */
-  --border-color: #e2e8f0;     /* Slate 200: linhas sutis */
-  
-  /* Cores de Ação */
-  --primary: #4f46e5;           /* Indigo 600: cor moderna de marca */
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --primary: #4f46e5;
   --primary-hover: #4338ca;
   --primary-light: #e0e7ff;
+  --danger: #ef4444;
   
-  --danger: #ef4444;            /* Red 500: erro e descarte */
-  --danger-hover: #dc2626;
-  
-  /* Raio de Borda (Border Radius) */
   --radius-lg: 16px;
   --radius-md: 12px;
   --radius-sm: 8px;
-  
-  /* Transições padrão */
   --transition: all 0.2s ease-in-out;
 }
 
-/* ==========================================================================
-   2. ESTILOS BASE
-   ========================================================================== */
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
   margin: 0;
-  padding: 40px 20px;
+  padding: 20px;
   background-color: var(--bg-primary);
   color: var(--text-main);
   min-height: 100vh;
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
+  display: flex;
+  justify-content: center;
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-main {
-  max-width: 680px; /* Reduzido levemente para melhor legibilidade de leitura */
-  margin: 0 auto;
-  background-color: var(--bg-card);
-  padding: 32px;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border-color);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-}
-
-h1 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: var(--text-main);
-  margin-top: 0;
-  margin-bottom: 24px;
-  letter-spacing: -0.025em;
-}
-
-/* ==========================================================================
-   3. FORMULÁRIO E INPUTS
-   ========================================================================== */
-#formPesquisa {
+.app-container {
+  width: 100%;
+  max-width: 720px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-/* Grid automático: duas colunas se houver espaço */
+/* Painel de Busca */
+.search-panel {
+  background-color: var(--bg-card);
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 .form-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;
+  margin-bottom: 20px;
 }
 
 .form-group {
@@ -87,7 +66,7 @@ h1 {
 label {
   font-size: 0.875rem;
   font-weight: 500;
-  color: #475569; /* Slate 600 */
+  color: #475569;
 }
 
 input[type="text"] {
@@ -96,177 +75,125 @@ input[type="text"] {
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   font-size: 0.95rem;
-  color: var(--text-main);
-  background-color: #ffffff;
   transition: var(--transition);
 }
 
-/* Efeito de foco moderno (Glow/Ring effect) */
 input[type="text"]:focus {
   outline: none;
   border-color: var(--primary);
   box-shadow: 0 0 0 4px var(--primary-light);
 }
 
-input[type="text"]::placeholder {
-  color: #94a3b8;
-}
-
-/* Container de Botões */
 .form-actions {
   display: flex;
-  justify-content: flex-end; /* Alinha os botões à direita (padrão desktop) */
+  justify-content: flex-end;
   gap: 12px;
-  margin-top: 8px;
 }
 
-/* ==========================================================================
-   4. COMPONENTES: BOTÕES
-   ========================================================================== */
 button {
-  padding: 10px 20px;
+  padding: 10px 24px;
   border: none;
   border-radius: var(--radius-md);
   font-weight: 600;
   font-size: 0.9rem;
   cursor: pointer;
   transition: var(--transition);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
 }
 
-/* Botão Primário (Pesquisar) */
 button[type="submit"] {
   background-color: var(--primary);
   color: #ffffff;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
 button[type="submit"]:hover {
   background-color: var(--primary-hover);
 }
 
-/* Botão Secundário (Limpar) */
 #limparBtn {
-  background-color: #f1f5f9; /* Slate 100: fundo neutro em vez de vermelho agressivo */
+  background-color: #f1f5f9;
   color: #475569;
 }
 
 #limparBtn:hover {
   background-color: #e2e8f0;
-  color: var(--text-main);
 }
 
-/* Divisor elegante */
-hr {
-  border: 0;
-  border-top: 1px solid var(--border-color);
-  margin: 24px 0;
-}
-
-/* ==========================================================================
-   5. CONTAINER DE RESULTADOS (Cards de Livros)
-   ========================================================================== */
-#resultado {
-  min-height: 60px;
+/* Painel de Resultados */
+.results-panel {
+  width: 100%;
 }
 
 .livro {
-  display: flex; /* Transforma o card em flex horizontal */
+  display: flex;
   gap: 20px;
   padding: 20px;
-  background-color: #f8fafc;
+  background-color: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   margin-bottom: 16px;
-  transition: var(--transition);
-}
-
-.livro:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
 }
 
 .livro-info {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
 }
 
 .livro h2 {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
+  margin: 0;
   color: var(--text-main);
-  margin: 0 0 4px 0;
-  font-weight: 600;
 }
 
 .livro p {
   margin: 0;
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: 0.875rem;
 }
 
 .livro img {
   width: 90px;
   height: 130px;
-  object-fit: cover; /* Evita que capas distorçam caso venham de APIs externas */
+  object-fit: cover;
   border-radius: var(--radius-sm);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  flex-shrink: 0; /* Impede a imagem de esmagar */
+  flex-shrink: 0;
 }
 
-/* Feedbacks de Status */
-p.erro {
-  color: var(--danger);
-  background-color: #fef2f2;
-  padding: 12px;
-  border-radius: var(--radius-sm);
-  border: 1px solid #fee2e2;
+.placeholder-text {
+  text-align: center;
+  color: var(--text-muted);
   font-size: 0.9rem;
-  margin: 10px 0;
+  padding: 40px 0;
 }
 
-p.carregando {
+.carregando {
+  text-align: center;
   color: var(--primary);
   font-weight: 500;
-  text-align: center;
-  padding: 20px 0;
-  animation: pulse 1.5s infinite ease-in-out;
+  padding: 30px 0;
 }
 
-@keyframes pulse {
-  0%, 100% { opacity: 0.6; }
-  50% { opacity: 1; }
+.erro {
+  color: var(--danger);
+  background-color: #fef2f2;
+  padding: 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid #fee2e2;
+  font-size: 0.9rem;
 }
 
-/* ==========================================================================
-   6. RESPONSIVIDADE E ADAPTAÇÃO MOBILE
-   ========================================================================== */
-@media (max-width: 640px) {
-  body {
-    padding: 16px 8px;
-  }
-
-  main {
-    padding: 20px;
-    border-radius: var(--radius-md);
-  }
-
+@media (max-width: 600px) {
   .form-actions {
-    flex-direction: column-reverse; /* Inverte para o botão principal ficar no topo no mobile */
-    gap: 8px;
+    flex-direction: column-reverse;
   }
-
   button {
     width: 100%;
-    padding: 12px;
   }
-
   .livro {
-    flex-direction: column; /* Volta a empilhar no mobile */
+    flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 16px;
   }
 }
