@@ -23,13 +23,21 @@ form.addEventListener('submit', async function (e) {
   if (autor) query += `${query ? '+' : ''}inauthor:${encodeURIComponent(autor)}`;
 
   try {
-    const apiKey = 'AIzaSyAyVJzZSpxjDwChJhiWvH0Y6gB3L_cCIDs';
-    const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
+    
+    const apiKey = 'AIzaSyAyVJzZSpxjDwChJhiWvH0Y6gB3L_cCIDs'; 
+    
+   
+    const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}&key=${apiKey}`);
+    
+  
+    if (response.status === 429) {
+      resultado.innerHTML = '<p class="erro" style="background-color: #fffbeb; border-color: #fde68a; color: #b45309;">Limite de requisições excedido. Por favor, aguarde alguns segundos.</p>';
+      return;
+    }
     
     if (!response.ok) throw new Error('Erro na requisição da API');
     
     const data = await response.json();
-
     if (data.items && data.items.length > 0) {
       resultado.innerHTML = data.items.slice(0, 10).map(item => {
         const volume = item.volumeInfo;
