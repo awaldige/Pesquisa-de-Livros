@@ -41,9 +41,10 @@ Desenvolvido com foco em boas práticas de JavaScript assíncrono, tratamento se
 
 ## 📸 Prévia do Projeto
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/2e3e38d0-7f99-40d9-a55a-d50ddb23f424" alt="Interface de Pesquisa" width="100%">
-</p>
+<img width="886" height="438" alt="image" src="https://github.com/user-attachments/assets/0a418a98-edf3-42ff-9e36-e2cdbf254727" />
+
+<img width="1135" height="632" alt="image" src="https://github.com/user-attachments/assets/cebad469-a604-496b-b212-8cf7d930f0ff" />
+
 
 ---
 
