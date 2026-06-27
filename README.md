@@ -1,96 +1,93 @@
-📚 Pesquisa de Livros
+# 📚 Pesquisa de Livros — Front-End Premium
 
-Aplicação web desenvolvida em HTML, CSS e JavaScript, que permite pesquisar livros utilizando a Google Books API, exibindo resultados com informações detalhadas e capa das obras.
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Conclu%C3%ADdo-success?style=for-the-badge" alt="Status Concluído">
+  <img src="https://img.shields.io/badge/Deploy-Vercel-000000?style=for-the-badge&logo=vercel" alt="Deploy Vercel">
+  <img src="https://img.shields.io/badge/JavaScript-Vanilla-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+</p>
 
-O projeto foi criado para fins de estudo e portfólio, demonstrando integração com APIs externas e manipulação dinâmica do DOM.
+Uma aplicação web moderna, responsiva e performática desenvolvida para pesquisar livros em tempo real utilizando a **Google Books API**. O projeto conta com uma interface de alta fidelidade visual baseada em conceitos de **Glassmorphism** (efeito de vidro jateado) e modo escuro nativo.
 
-🚀 Funcionalidades
+Desenvolvido com foco em boas práticas de JavaScript assíncrono, tratamento seguro de dados e portfólio de engenharia front-end.
 
-🔍 Pesquisa de livros por título e/ou autor
+---
 
-📖 Exibição da capa do livro
+## 🌐 Acesse o Projeto Online
 
-📝 Informações detalhadas:
+🔗 **[https://pesquisa-de-livros.vercel.app/](https://pesquisa-de-livros.vercel.app/)**
 
-Título
+---
 
-Autores
+## 🚀 Funcionalidades Principais
 
-Data de publicação
+* **Busca Inteligente:** Pesquisa avançada combinando ou isolando os filtros de título (`intitle:`) e autor (`inauthor:`).
+* **UI/UX Premium:** Design imersivo estilo *Tech Dashboard* com microinterações suaves, efeitos hover dinâmicos e carregamento animado (*Pulse Loading*).
+* **Cards Dinâmicos:** Exibição da capa da obra com efeito de profundidade, título, autores, data de publicação e resumo truncado de forma elegante.
+* **Segurança de Conteúdo:** Tratamento forçado de URLs de imagens para HTTPS, prevenindo bloqueios de *mixed content* em navegadores modernos.
+* **Tratamento de Rate Limit:** Arquitetura preparada com validações específicas para o status HTTP `429` (Too Many Requests), melhorando a experiência do usuário em caso de sobrecarga.
+* **Limpeza Nativa:** Botão de reset rápido que restaura o estado inicial do DOM e do formulário nativamente.
+* **Responsividade Total:** Interface adaptável para uma experiência perfeita em dispositivos móveis, tablets e desktops.
 
-Descrição
+---
 
-🔗 Link direto para página do livro no Google Books
+## 🛠️ Tecnologias Utilizadas
 
-🧹 Botão para limpar resultados da busca
+* **HTML5** — Estruturação semântica e acessível da aplicação.
+* **CSS3 (Custom Properties)** — Estilização moderna via variáveis globais, Flexbox, CSS Grid nativo e efeitos de desfoque (`backdrop-filter`).
+* **JavaScript (ES6+)** — Lógica assíncrona baseada em `async/await`, manipulação precisa do DOM com templates literais e processamento de dados (`map`, `join`, `slice`).
+* **Google Books API** — Integração com o ecossistema de dados públicos do Google.
 
-📱 Layout responsivo
+---
 
-🛠️ Tecnologias Utilizadas
+## 📸 Prévia do Projeto
 
-HTML5 — Estrutura da aplicação
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2e3e38d0-7f99-40d9-a55a-d50ddb23f424" alt="Interface de Pesquisa" width="100%">
+</p>
 
-CSS3 — Estilização e responsividade
+---
 
-JavaScript (Vanilla JS) — Lógica e consumo da API
+## 🎯 Conceitos de Engenharia Aplicados
 
-Google Books API — Fonte de dados dos livros
+Este projeto foi construído para simular um cenário real de desenvolvimento front-end, aplicando conceitos como:
+* **Consumo de APIs RESTful** de forma otimizada.
+* **Tratamento de Erros e Exceções** em requisições de rede utilizando blocos `try/catch`.
+* **Performance de Carregamento:** Uso de atributos modernos como `loading="lazy"` nas imagens injetadas.
+* **Manutenibilidade:** Separação rígida de responsabilidades em arquivos limpos e organizados de CSS e JS.
 
-🌐 Acesse o Projeto Online
+---
 
-🔗https://pesquisa-de-livros.vercel.app/
+## ▶️ Como Executar o Projeto Localmente
 
-📸 Prévia
+1. Clone este repositório em sua máquina:
+   ```bash
+   git clone [https://github.com/awaldige/Pesquisa-de-Livros.git](https://github.com/awaldige/Pesquisa-de-Livros.git)
+Entre na pasta do projeto:
 
-![Captura de tela 2026-04-04 145513](https://github.com/user-attachments/assets/2e3e38d0-7f99-40d9-a55a-d50ddb23f424)
-![Captura de tela 2026-04-04 145357](https://github.com/user-attachments/assets/7fd1027c-e382-4dd3-b469-76acc70619d8)
+Bash
+cd Pesquisa-de-Livros
+Abra o projeto utilizando um servidor local para evitar bloqueios de políticas de CORS do navegador.
 
+No VS Code, você pode usar a extensão Live Server (clicando com o botão direito no index.html e selecionando Open with Live Server).
 
+Ou utilizando o Node.js:
 
+Bash
+npx serve .
+🔮 Evoluções Futuras
+[ ] Implementação de paginação infinita ou baseada em botões de resultados.
 
-🎯 Objetivo do Projeto
+[ ] Filtros refinados por idioma, categoria ou relevância de ordenação.
 
-Este projeto foi desenvolvido como parte do meu portfólio front-end, com foco em:
+[ ] Funcionalidade de "Favoritar Livro" persistida no localStorage do navegador.
 
-Consumo de APIs REST
-
-Manipulação de DOM
-
-Renderização dinâmica de dados
-
-Organização de código front-end
-
-Experiência do usuário
-
-▶️ Como Executar Localmente
-
-Clone o repositório:
-
-git clone https://github.com/awaldige/Pesquisa-de-Livros.git
-
-
-Abra o arquivo index.html no navegador.
-
-Nenhum servidor ou backend é necessário.
-
-🔮 Melhorias Futuras
-
-Possíveis evoluções do projeto:
-
-Paginação de resultados
-
-Filtros por categoria ou idioma
-
-Favoritos salvos no navegador
-
-Histórico de pesquisas
-
-Integração com backend
+[ ] Esqueleto de carregamento (Skeleton Screens) substituindo a mensagem de texto atual.
 
 👨‍💻 Autor
+Desenvolvido por André Waldige Se você gostou deste projeto ou quer trocar uma ideia sobre desenvolvimento web, entre em contato!
 
-Desenvolvido por André Waldige
+LinkedIn: andre-waldige-dev
 
-🔗 GitHub: https://github.com/awaldige
+GitHub: @awaldige
 
-💼 Desenvolvedor Front-End focado em soluções web modernas.
+Developed with 💻, ☕ and Clean Code.
