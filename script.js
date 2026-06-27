@@ -23,6 +23,7 @@ form.addEventListener('submit', async function (e) {
   if (autor) query += `${query ? '+' : ''}inauthor:${encodeURIComponent(autor)}`;
 
   try {
+    const apiKey = 'AIzaSyAyVJzZSpxjDwChJhiWvH0Y6gB3L_cCIDs';
     const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
     
     if (!response.ok) throw new Error('Erro na requisição da API');
